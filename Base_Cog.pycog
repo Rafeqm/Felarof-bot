@@ -1,0 +1,18 @@
+import discord
+from discord.ext import commands
+
+#---KAMUS CABANG---#
+
+
+class BaseCog(commands.Cog):
+
+    def __init__(self, client):
+        self.client = client
+
+    @commands.command()
+    
+    @commands.Cog.listener()
+
+
+def setup(client):
+    client.add_cog(BaseCog(client))
