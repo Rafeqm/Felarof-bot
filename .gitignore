@@ -1,4 +1,4 @@
-.gitiignore
+.gitignore
 bot-env/
 cogs/__pycache__/
 Base_Cog.pycog
