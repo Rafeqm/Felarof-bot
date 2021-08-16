@@ -1,5 +1,5 @@
 .gitignore
 bot-env/
-cogs/__pycache__/
-Base_Cog.pycog
+*/**/__pycache__/
+Base_Cog.pytes
 .env
