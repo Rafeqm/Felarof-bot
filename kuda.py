@@ -35,7 +35,9 @@ client.unload_extension('cogs.CogFileName')
 
 # --Load all cogs in cogs folder
 for filename in os.listdir('./cogs'):
-    if filename.endswith('.py'):
+    if filename == '__pycache__':
+        continue
+    elif filename.endswith('.py'):
         client.load_extension(f'cogs.{filename[:-3]}')
     else:
         print(f'Unable to load {filename}')
@@ -45,7 +47,9 @@ for filename in os.listdir('./cogs'):
 @commands.has_guild_permissions()
 async def reboot(ctx):  # To reload all cogs in cogs folder
     for filename in os.listdir('./cogs'):
-        if filename.endswith('.py'):
+        if filename == '__pycache__':
+            continue
+        elif filename.endswith('.py'):
             client.reload_extension(f'cogs.{filename[:-3]}')
         else:
             print(f'Unable to load {filename}')
